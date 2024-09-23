@@ -1,0 +1,10 @@
+#root {
+  margin-right: calc(-1 * (100vw - 100%));
+  font-family: 'Ronnia Italic', sans-serif !important;
+
+  html {
+
+    scroll-behavior: smooth !important;
+  }
+  text-align: center;
+}

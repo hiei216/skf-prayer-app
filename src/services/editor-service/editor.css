@@ -1,0 +1,3 @@
+/* Fix for long padding */
+.codex-editor__redactor { padding-bottom: 300px !important; height: unset !important; }
+.ce-popover__container {z-index: 100000000000 !important;}
