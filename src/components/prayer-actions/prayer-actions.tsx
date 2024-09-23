@@ -31,7 +31,7 @@ export const PrayerActions: React.FC = () => {
       );
       queryClient.invalidateQueries(
         {
-          queryKey: ['todaysVerseResults'],
+          queryKey: ['filteredVerses'],
           refetchType: 'active',
         },
         { throwOnError: true, cancelRefetch: false },

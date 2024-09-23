@@ -24,7 +24,7 @@ export const EditorParser: React.FC<Props> = ({ id, data }) => {
     );
     queryClient.invalidateQueries(
       {
-        queryKey: ['todaysVerseResults'],
+        queryKey: ['filteredVerses'],
         refetchType: 'active',
       },
       { throwOnError: true, cancelRefetch: false },

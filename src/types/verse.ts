@@ -14,7 +14,7 @@ export type VerseData = {
 export type VerseFilterData = {
   dateFrom: string;
   dateTo: string;
-  participant: Omit<ParticipantData, 'password' | 'email'>;
+  participant?: Omit<ParticipantData, 'password' | 'email'>;
 };
 
 export type FoundVersesData = ParticipantResponseData & {verseData: VerseData};

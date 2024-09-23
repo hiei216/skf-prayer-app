@@ -1,11 +1,13 @@
 import React from 'react';
 import { Grid } from 'react-loader-spinner';
+import { startOfDay, endOfDay, format } from "date-fns";
+import { AxiosError } from 'axios';
+
 
 import { ParticipantDailyEntry } from './participant-daily-entry';
-import { useTodaysVerseResults } from '../../hooks/useTodaysVerseResults';
 import { useParticipantsStore } from '../../hooks/use-participants-store';
-import { AxiosError } from 'axios';
 import { VerseFilterDataResponse } from '../../types/verse';
+import { useFilteredVerses } from '../../hooks/use-filtered-verses';
 
 type Props = { verseResults: VerseFilterDataResponse; error: AxiosError | null | unknown; isLoading: boolean };
 
@@ -47,7 +49,14 @@ export const VerseList: React.FC<Props> = ({
 };
 
 export const ParticipantVerseList: React.FC = () => {
-  const { data: todaysVerseResults, error, isLoading } = useTodaysVerseResults();
+  const { data: todaysVerseResults, error, isLoading } = useFilteredVerses({
+    dateFrom: format(startOfDay(new Date()), 'yyyy-MM-dd'),
+    dateTo: format(endOfDay(new Date()), 'yyyy-MM-dd'),
+    participant: {
+      firstName: '',
+      lastName: '',
+    },
+  });
   const isVerseResultLoading = useParticipantsStore(
     (state) => state.isVerseResultLoading,
   );

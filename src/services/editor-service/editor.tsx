@@ -15,13 +15,6 @@ export const Editor: React.FC<Props> = ({ verseId }) => {
   const editorContainer = useRef<HTMLDivElement | null>(null);
   const queryClient = useQueryClient();
 
-  const doSomething = () => {
-    if (ejInstance.current) {
-      ejInstance.current.destroy();
-      ejInstance.current = null;
-    }
-  };
-
   const handleSave = async (id: string) => {
     if (ejInstance.current) {
       const outputData: OutputData = await ejInstance.current.save();
@@ -38,7 +31,7 @@ export const Editor: React.FC<Props> = ({ verseId }) => {
         );
         queryClient.invalidateQueries(
           {
-            queryKey: ['todaysVerseResults'],
+            queryKey: ['filteredVerses'],
             refetchType: 'active',
           },
           { throwOnError: true, cancelRefetch: false },
@@ -56,8 +49,13 @@ export const Editor: React.FC<Props> = ({ verseId }) => {
         tools: EDITOR_TOOLS,
       });
     }
-
-    return () => doSomething();
+    
+    return () => {
+      if (ejInstance.current) {
+        ejInstance.current.destroy();
+        ejInstance.current = null;
+      }
+    };
   }, []);
 
   return (
