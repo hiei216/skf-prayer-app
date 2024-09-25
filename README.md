@@ -1,7 +1,7 @@
 # skf-prayer-app
 
 ### Description
-This app is divided into 3 main sections. On the first tab you can select in the dropdown a prayes and the information abou it will be displayed. On the second tab you can add new participants or choose one from the list and create for them randomly a bible verse. On the third tab you can filter the already created bible verses by name and date.
+This app is divided into 3 main sections. On the first tab you can select in the dropdown a prayer and the information about it will be displayed. On the second tab you can add new participants or choose one from the list and create for them randomly a bible verse. On the third tab you can filter the already created bible verses by name and date.
 
 ### Diagram of the whole app
  ![App diagram](/src/components/assets/skf-prayer-app-diagram.jpg)
