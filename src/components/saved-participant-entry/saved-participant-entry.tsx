@@ -29,8 +29,9 @@ export const SavedParticipantEntry: React.FC<Props> = ({ participant }) => {
         onClick={() => {
           if (isParticipantPicked) {
             removeParticipant(participant);
+          } else {
+            addParticipant([participant]);
           }
-          addParticipant([participant])
         }}
       />
     </div>

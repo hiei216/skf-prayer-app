@@ -11,7 +11,7 @@ export const LandingPage: React.FC = () => {
         <h1 className="mb-10 text-3xl font-bold text-gray-800 sm:text-5xl">Biblické Verše</h1>
         {MENU_ITEMS.map((item, index) => (
           <Link
-            className="group mt-5 flex w-48 justify-between rounded-[5px] border-2 border-solid border-orange bg-white px-2 py-1 font-bold text-orange hover:cursor-pointer hover:bg-orange hover:text-white"
+            className="group mt-5 flex w-48 justify-between rounded-[5px] border-2 border-solid border-orange bg-white px-2 py-1 font-bold text-orange hover:cursor-pointer hover:bg-orange hover:text-white transition-all duration-300 hover:w-52"
             key={index}
             to={item.url}
             onClick={() => (window.location.href = `${item.url}`)}
