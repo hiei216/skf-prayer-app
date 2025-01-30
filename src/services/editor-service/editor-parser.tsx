@@ -1,4 +1,3 @@
-import React from 'react';
 import Output from 'editorjs-react-renderer';
 import { useQueryClient } from '@tanstack/react-query';
 import { format } from 'date-fns';

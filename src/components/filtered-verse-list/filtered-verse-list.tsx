@@ -1,4 +1,3 @@
-import React from 'react';
 import { Grid } from 'react-loader-spinner';
 
 import { ParticipantDailyEntry } from '../participant-verse-list/participant-daily-entry';

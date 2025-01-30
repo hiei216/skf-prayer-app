@@ -1,4 +1,3 @@
-import React from 'react';
 import { getHours, getMinutes, format } from 'date-fns';
 
 import { ParticipantEntry } from '../participant-entry/participant-entry';

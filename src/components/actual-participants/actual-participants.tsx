@@ -1,4 +1,3 @@
-import React from 'react';
 import { useParticipantsStore } from '../../hooks/use-participants-store';
 import { ParticipantInitials } from '../participant-entry/participant-entry';
 

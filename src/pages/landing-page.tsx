@@ -1,10 +1,9 @@
-import React from 'react';
 import { Link } from 'react-scroll';
 
 import { MENU_ITEMS } from './../components/menu/menu-items';
 import { ReactComponent as ArrowForward } from './../components/assets/arrow-forward.svg';
 
-export const LandingPage: React.FC = () => {
+const LandingPage: React.FC = () => {
   return (
     <div className="sm:bg-bible-horizontal bg-bible-vertical flex min-h-screen w-full items-start justify-center bg-cover bg-center sm:justify-start">
       <div className="mt-32 text-start sm:m-36">
@@ -24,3 +23,5 @@ export const LandingPage: React.FC = () => {
     </div>
   );
 };
+
+export default LandingPage;

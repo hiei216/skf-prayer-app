@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Router from './routing/router';
 
 import './App.css';

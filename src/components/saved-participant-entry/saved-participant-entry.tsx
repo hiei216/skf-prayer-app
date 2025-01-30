@@ -1,4 +1,3 @@
-import React from 'react';
 import classnames from 'classnames';
 
 import { ReactComponent as CheckCircle } from './../assets/check-circle.svg';

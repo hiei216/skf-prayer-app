@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { MenuButton } from './menu-button';
 import { MENU_ITEMS } from "./menu-items";
 
-export const Menu: React.FC = () => {
+const Menu: React.FC = () => {
   useEffect(() => {
     const pathname = window.location.pathname;
     if (pathname) {
@@ -11,6 +11,7 @@ export const Menu: React.FC = () => {
   }, []);
 
   const [selectedPath, setSelectedPath] = useState('');
+
   return (
     <nav className="w-full max-w-[900px]">
       <div className="my-2 flex w-full flex-col">
@@ -28,3 +29,5 @@ export const Menu: React.FC = () => {
     </nav>
   );
 };
+
+export default Menu;

@@ -1,4 +1,3 @@
-import React from 'react';
 import { AxiosError } from 'axios';
 import { ThreeDots } from 'react-loader-spinner';
 

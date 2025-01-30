@@ -4,7 +4,7 @@ import { PRAYERS, Prayer } from '../data/prayers';
 import { setNewUrlWithParam } from '../services/url-service';
 import { CollapsibleEntry } from '../components/collapsible-entry/collapsible-entry';
 
-export const PrayerPickerPage: React.FC = () => {
+const PrayerPickerPage: React.FC = () => {
   const [prayer, setPrayer] = useState<string>('');
 
   useEffect(() => {
@@ -96,3 +96,5 @@ export const PrayerPickerPage: React.FC = () => {
     </div>
   );
 };
+
+export default PrayerPickerPage;

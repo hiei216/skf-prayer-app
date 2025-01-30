@@ -9,7 +9,7 @@ const scrollToTop = () => {
   });
 };
 
-export const UpNavigation: React.FC = () => {
+const UpNavigation: React.FC = () => {
   const [displayTopButton, setDisplayTopButton] = useState(false);
 
   useEffect(() => {
@@ -42,3 +42,5 @@ export const UpNavigation: React.FC = () => {
     </div>
   );
 };
+
+export default UpNavigation;
